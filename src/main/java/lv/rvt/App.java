@@ -5,28 +5,29 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Give point [0-100]:");
+        double tax = 0;
 
-        int cipars1 = Integer.valueOf(scanner.nextLine());
+        System.out.print("Value of the gift? ");
+        double giftValue = scanner.nextDouble();
 
-
-        if (cipars1 <= 0 ) {
-            System.out.println("impossible!");
-        }  else if (cipars1 >= 0 && cipars1 <= 49) {
-            System.out.println("failed");
-        }  else if (cipars1 >= 50 && cipars1 <= 59) {
-            System.out.println("1");
-        }  else if (cipars1 >= 60 && cipars1 <= 69) {
-            System.out.println("2");
-        }  else if (cipars1 >= 70 && cipars1 <= 79) {
-            System.out.println("3");
-        }  else if (cipars1 >= 80 && cipars1 <= 89) {
-            System.out.println("4");
-        }  else if (cipars1 >= 90 && cipars1 <= 100) {
-            System.out.println("5");
-        }  else {
-                System.out.println("Incredible");
-            }
+        if (giftValue < 5000) {
+            System.out.println("No tax!");
+        } else if (giftValue >= 5000 && giftValue < 25000) {
+            tax = 100 + (giftValue - 5000) * 0.08;
+        } else if (giftValue >= 25000 && giftValue < 55000) {
+            tax = 1700 + (giftValue - 25000) * 0.10;
+        } else if (giftValue >= 55000 && giftValue < 200000) {
+            tax = 4700 + (giftValue - 55000) * 0.12;
+        } else if (giftValue >= 200000 && giftValue < 1000000) {
+            tax = 22100 + (giftValue - 200000) * 0.15;
+        } else {
+            tax = 142100 + (giftValue - 1000000) * 0.17;
         }
-}    
+
+        System.out.println(String.format("Tax: %.2f€", tax));
+       
+        
+    }
+}
+
 
