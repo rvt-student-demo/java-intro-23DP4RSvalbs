@@ -1,36 +1,25 @@
 package lv.rvt;
 import java.util.Scanner;
 public class App {
+    public static void printsstars(int number) {
+        for(int i = 1;i <=number; i++) {
+            System.out.print("****");
+            System.out.println("");
+
+
+        }
+
+    }
     public static void main( String[] args ){
-        Scanner scanner = new Scanner(System.in);
+        printsstars(5);
+        printsstars(3);
+        printsstars(9);
 
-
-        System.out.println("How many times?");
-        int n = scanner.nextInt();
-            for (int i =1;i<=n;++i){
-                printText();
-            }
-    }
-
-    public static void printText() {
         
-
-            System.out.println("In a hole in the ground there lived a method");
-        
-        
-        
-        
-
 
     }
 
-        
-        
-        
-
-
-
-
+    
 
     
 
