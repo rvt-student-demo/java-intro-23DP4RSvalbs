@@ -2,49 +2,45 @@ package lv.rvt;
 import java.util.*;
 public class App {
 
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        int meginajums = 3;
-        Random rand = new Random();
-        int val = rand.nextInt(10)+1;
-
-
-
-
-        System.out.println("I am thinking of a number from 1 to 10.");
-        System.out.println("You must guess what it is in three tries.");
-        System.out.println("Enter a guess: ");
-
-        while ( meginajums >0)
-        {
-            int cipars = Integer.valueOf(scanner.nextLine());
-            if (cipars == val) {
-                System.out.println("RIGHT!");
-                System.out.println("You have won the game.");
-                break;
-            }
-            else { 
-                System.out.println("wrong");
-                meginajums -= 1;
-
-                if (meginajums == 0) {
-                    System.out.println("The correct number was "+val+".");
-                    System.out.println("You have lost the game.");
-                    
-                }
-                    
-                }
-                    
-            
-        
-            
-        }
-      } 
+    public static void main(String[] args) {
+        printTriangle(4);
+        System.out.println();
+        christmasTree(4);
+        System.out.println();
+        christmasTree(10);
     }
+    public static void printSpaces(int number) {
+        for (int i = 0; i < number; i++) {
+            System.out.print(" ");
+        }
+    }
+
+    public static void printStars(int number) {
+        for (int i = 0; i < number; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+
+    public static void printTriangle(int size) {
+        for (int i = 1; i <= size; i++) {
+            printSpaces(size - i);
+            printStars(i);
+        }
+    }
+
+    public static void christmasTree(int height) {
+        for (int i = 1; i <= height; i++) {
+            printSpaces(height - i);
+            printStars(2 * i - 1);
+        }
         
-
-
-
+        for (int i = 0; i < 2; i++) {
+            printSpaces(height - 2);
+            printStars(3);
+        }
+    }
+}
 
         
            
