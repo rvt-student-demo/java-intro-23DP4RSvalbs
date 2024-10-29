@@ -1,102 +1,59 @@
 package lv.rvt;
-
+import java.util.*;
 public class App {
 
     public static void main(String[] args){
-        printSpaces(3);
-        printStars(1);
-        printSpaces(2);
-        printStars(2);
-        printSpaces(1);
-        printStars(3);
-        printStars(4);
-        System.out.println();
+        Scanner scanner = new Scanner(System.in);
+        int meginajums = 3;
+        Random rand = new Random(10);
+        int val = rand.nextInt((10)+1);
 
 
-    }
-    
-    public static void christmasTree(int height){
-            for (int i=0; i<height;i++){
-                
+
+
+        System.out.println("I am thinking of a number from 1 to 10.");
+        System.out.println("You must guess what it is in three tries.");
+        System.out.println("Enter a guess: ");
+
+        while ( true )
+        {
+            int cipars = Integer.valueOf(scanner.nextLine());
+            if (cipars == val) {
+                System.out.println("RIGHT!");
+                System.out.println("You have won the game.");
+                break;
             }
-                
-    }
+                else { 
+                    System.out.println("wrong");
+                    meginajums -= 1;
 
-
-
-    public static void printSpaces(int number){
-        for(int i =0;i < number;i++){
-            System.out.print(" ");
-
-        }
-    }
-
-
-    public static void printStars(int number) {
-
-        for (int i=0;i<number;i++) {
-            System.out.print("*");
-        }
-        System.out.println();
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    public static void printTriangle(int size){
-        for (int i=1;i<=size;i++){
-            printStars(i);
-        }
-    }
-
-
-
-
-
-
-
-        public static void printSquare(int size) {
-            for (int i =0; i <size;i++){
-                printStars(size);
-            }
-
-        }
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-    
-}  
-    
-
+                    if (meginajums == 3) {
+                        System.out.println("The correct number was "+val+".");
+                        System.out.println("You have lost the game.");
+                        break;
+                    }
+                        continue;
+                }
+                    
             
-               
+        
+            
+        }
+      } 
+    }
+        
 
 
 
 
         
+           
+    
         
- 
         
+
+
+
 
             
             
