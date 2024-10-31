@@ -3,45 +3,23 @@ import java.util.*;
 public class App {
 
     public static void main(String[] args) {
-        printTriangle(4);
-        System.out.println();
-        christmasTree(4);
-        System.out.println();
-        christmasTree(10);
-    }
-    public static void printSpaces(int number) {
-        for (int i = 0; i < number; i++) {
-            System.out.print(" ");
-        }
-    }
-
-    public static void printStars(int number) {
-        for (int i = 0; i < number; i++) {
-            System.out.print("*");
-        }
-        System.out.println();
-    }
-
-    public static void printTriangle(int size) {
-        for (int i = 1; i <= size; i++) {
-            printSpaces(size - i);
-            printStars(i);
-        }
-    }
-
-    public static void christmasTree(int height) {
-        for (int i = 1; i <= height; i++) {
-            printSpaces(height - i);
-            printStars(2 * i - 1);
-        }
         
-        for (int i = 0; i < 2; i++) {
-            printSpaces(height - 2);
-            printStars(3);
-        }
+        int[] val = {0, 1, 2, 3}; 
+                
+        int sum = val[0]+ val[1] + val[2] + val[3]; 
+        
+        
+        
+        System.out.println("Sum of all numbers = " + sum);
+            
+        
+        
+
+
+
+
     }
 }
-
         
            
     
