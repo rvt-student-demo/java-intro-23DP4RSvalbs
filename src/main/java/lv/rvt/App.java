@@ -1,39 +1,54 @@
 package lv.rvt;
 import java.util.*;
-public class App {
-
-    public static void main ( String[] args )
-    {
-        int[] val = {0, 1, 2, 3}; 
-        int temp;
-
-        System.out.println("Original Array: " 
-            + val[0] + " " + val[1] + " " + val[2] + " " + val[3]);
-
+public class Main {
+    public static void main(String[] args) {
         
-        temp = val[0];
-        val[0] = val[3];
-        val[3] = temp;
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> birthYears = new ArrayList<>();
 
-        temp = val[1];
-        val[1] = val[2];
-        val[2] = temp;
+     
+        while (true) {
+            System.out.print("Enter name and birth year (name,year) or press enter to finish: ");
+            String input = scanner.nextLine();
+            
+         
+            if (input.isEmpty()) {
+                break;
+            }
+            
+      
+            String[] parts = input.split(",");
+            String name = parts[0];
+            int year = Integer.parseInt(parts[1]);
 
-        System.out.println("Reversed Array: " 
-            + val[0] + " " + val[1] + " " + val[2] + " " + val[3]);
+            names.add(name);
+            birthYears.add(year);
+        }
+
+       
+        String longestName = "";
+        for (String name : names) {
+            if (name.length() > longestName.length()) {
+                longestName = name;
+            }
+        }
+
+     
+        int sumOfYears = 0;
+        for (int year : birthYears) {
+            sumOfYears += year;
+        }
+        double averageBirthYear = (double) sumOfYears / birthYears.size();
+
+       
+        System.out.println("Longest name: " + longestName);
+        System.out.println("Average of the birth years: " + averageBirthYear);
     }
-  
 }
 
 
 
-        
-        
-
-
-    
-
-        
 
 
 
