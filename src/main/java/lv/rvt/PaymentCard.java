@@ -8,13 +8,15 @@ public class PaymentCard {
     }
 
     public void eatAffordably() {
-        if (this.balance >= 2.60) { // Only deduct if there's enough balance
+        if (this.balance >= 2.60) { 
+
             this.balance -= 2.60;
         }
     }
 
     public void eatHeartily() {
-        if (this.balance >= 4.60) { // Only deduct if there's enough balance
+        if (this.balance >= 4.60) { 
+
             this.balance -= 4.60;
         }
     }
