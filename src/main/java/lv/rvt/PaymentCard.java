@@ -23,21 +23,14 @@ public class PaymentCard {
     
 
     public void addMoney(double amount) {
-        while (true) {
-        if (amount > 0){
-            this.balance += amount; 
-        }
-        else {
-            break;
-        }
-        
-        }
-    }
+        this.balance += amount;
 
+    }
 
     @Override
     public String toString() {
         return "The card has a balance of " + this.balance + " euros";
     }
-}
+    
 
+}
