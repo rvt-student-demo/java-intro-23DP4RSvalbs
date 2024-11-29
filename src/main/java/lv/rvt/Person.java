@@ -12,6 +12,7 @@ public class Person {
         this.age = age;
         this.height = height;
         this.weight = weight;
+        
     }
 
     public String getName() {
@@ -21,6 +22,7 @@ public class Person {
     public int getWeight() {
         return this.weight;
     }
+
 }
 
 
