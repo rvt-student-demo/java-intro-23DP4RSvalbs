@@ -1,17 +1,20 @@
 package lv.rvt;
 
 public class HealthStation {
+    private int weighingCount; 
 
-    private int weight;
-    
-        public int weigh(Person person) {
-            
-            return person.getWeight();
-        }
-    
-        public int feed(Person ethan) {
-                return this.weight += 3;
-    
-        }
+    public HealthStation() {
+        this.weighingCount = 0; 
+    }
+
+    public int weigh(Person person) {
+        this.weighingCount++; 
+        return person.getWeight(); 
+    }
+
+    public int weighings() {
+        return this.weighingCount; 
+    }
 }
+
 
