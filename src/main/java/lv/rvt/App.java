@@ -1,23 +1,16 @@
 package lv.rvt;
 public class App {
     public static void main(String[] args) {
-        Timer timer = new Timer();
 
-    while (true) {
-    System.out.println(timer);
-    timer.advance();
-
-    try {
-        Thread.sleep(10);
-    } catch (Exception e) {
-
-    }
-}
-
-
-    }
     
-       
+        HealthStation childrensHospital = new HealthStation();
+    
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
+    
+        System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+        System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+}
 }
 
 
