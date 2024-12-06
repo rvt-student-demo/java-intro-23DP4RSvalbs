@@ -1,5 +1,3 @@
-package lv;
-
 public class DecreasingCounter {
     private int value;
 

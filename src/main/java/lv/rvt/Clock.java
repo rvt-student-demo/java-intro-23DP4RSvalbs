@@ -1,17 +1,23 @@
 package lv.rvt;
 
 public class Clock {
-    private ClockHand hours;
-    private ClockHand minutes;
-    private ClockHand seconds;
+    
+
+    private Clock hours;
+    private Clock minutes;
+    private Clock seconds;
 
     public Clock() {
+        
+@SuppressWarnings("All")
         this.hours = new ClockHand(24);
         this.minutes = new ClockHand(60);
         this.seconds = new ClockHand(60);
     }
 
     public void advance() {
+
+        @SuppressWarnings("unchecked")
         this.seconds.advance();
 
         if (this.seconds.value() == 0) {
@@ -24,6 +30,8 @@ public class Clock {
     }
 
     public String toString() {
+        
+@SuppressWarnings("unchecked")
         return hours + ":" + minutes + ":" + seconds;
     }
     
