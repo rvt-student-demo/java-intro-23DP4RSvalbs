@@ -22,7 +22,14 @@ class App
       System.out.println("Box 2 (copied from Box 1) - Height: " + box2.height());
       System.out.println("Box 2 (copied from Box 1) - Length: " + box2.length());
 
-  }
+
+      Box smallerBox = box.smallerBox(box);
+        System.out.println("Smaller Box - Volume: " + smallerBox.volume());
+        System.out.println("Smaller Box - Surface Area: " + smallerBox.area());
+        System.out.println("Smaller Box - Width: " + smallerBox.width());
+        System.out.println("Smaller Box - Height: " + smallerBox.height());
+        System.out.println("Smaller Box - Length: " + smallerBox.length());
+    }
 }
 
 

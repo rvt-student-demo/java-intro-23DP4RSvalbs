@@ -57,7 +57,23 @@ public class Box {
     public double length() {
         return length;
     }
+    public Box biggerBox(Box oldBox) {
+        return new Box(
+            1.25 * oldBox.width(),
+            1.25 * oldBox.height(),
+            1.25 * oldBox.length()
+        );
+    }
+
+    public Box smallerBox(Box oldBox) {
+        return new Box(
+            0.75 * oldBox.width(),
+            0.75 * oldBox.height(),
+            0.75 * oldBox.length()
+        );
+    }
 }
+
 
 
 
