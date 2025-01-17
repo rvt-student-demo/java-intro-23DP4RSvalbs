@@ -6,15 +6,18 @@ public class Box {
     private double height;
     private double length;
 
-     
-        public Box(double width, double length, double height){
-            this.width = width;
-            this.height = height;
-            this.length = length;
-        }
-    
+
+    public Box(double width, double height, double length) {
+        this.width = width;
+        this.height = height;
+        this.length = length;
+    }
     public Box(double side) {
-        this(side, side ,side);
+        this(side, side, side);
+    }
+
+    public Box(Box oldBox) {
+        this(oldBox.width, oldBox.height, oldBox.length);
     }
 
 
@@ -32,7 +35,6 @@ public class Box {
         return width * height;
     }
 
-
     private double topArea() {
         return width * length;
     }
@@ -42,6 +44,21 @@ public class Box {
         return height * length;
     }
 
+    public double width() {
+        return width;
+    }
 
 
+    public double height() {
+        return height;
+    }
+
+
+    public double length() {
+        return length;
+    }
 }
+
+
+
+
