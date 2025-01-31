@@ -1,35 +1,20 @@
 package lv.rvt;
 
 
-class App
-{
+import java.util.ArrayList;
 
-  public static void main ( String[] args )
-  {
-     Box box = new  Box( 2.5, 5.0, 6.0 ) ;
+public class App {
+    public static void printPersons(ArrayList<Person> persons) {
+        for (Person person : persons) {
+            System.out.println(person);
+        }
+    }
 
-      System.out.println("Box 1 - Volume: " + box.volume());
-      System.out.println("Box 1 - Surface Area: " + box.area());
-      System.out.println("Box 1 - Width: " + box.width());
-      System.out.println("Box 1 - Height: " + box.height());
-      System.out.println("Box 1 - Length: " + box.length());
+    public static void main(String[] args) {
+        ArrayList<Person> persons = new ArrayList<>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
 
-      Box box2 = new Box(box);
-
-      System.out.println("Box 2 (copied from Box 1) - Volume: " + box2.volume());
-      System.out.println("Box 2 (copied from Box 1) - Surface Area: " + box2.area());
-      System.out.println("Box 2 (copied from Box 1) - Width: " + box2.width());
-      System.out.println("Box 2 (copied from Box 1) - Height: " + box2.height());
-      System.out.println("Box 2 (copied from Box 1) - Length: " + box2.length());
-
-
-      Box smallerBox = box.smallerBox(box);
-        System.out.println("Smaller Box - Volume: " + smallerBox.volume());
-        System.out.println("Smaller Box - Surface Area: " + smallerBox.area());
-        System.out.println("Smaller Box - Width: " + smallerBox.width());
-        System.out.println("Smaller Box - Height: " + smallerBox.height());
-        System.out.println("Smaller Box - Length: " + smallerBox.length());
+        printPersons(persons);
     }
 }
-
-
