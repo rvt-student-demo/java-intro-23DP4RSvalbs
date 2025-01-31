@@ -3,26 +3,23 @@ package lv.rvt;
 
 public class Person {
     private String name;
-    private int age;
-    private int height;
-    private int weight;
+    private String address;
 
-    public Person(String name, int age, int height, int weight) {
+    public Person(String name, String address) {
         this.name = name;
-        this.age = age;
-        this.height = height;
-        this.weight = weight;
-        
+        this.address = address;
     }
 
-    public String getName() {
-        return this.name;
+    @Override
+    public String toString() {
+        return name + "\n " + address;
     }
 
-    public int getWeight() {
-        return this.weight;
-    }
+    public static void main(String[] args) {
+        Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN");
+        Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
 
+        System.out.println(ada);
+        System.out.println(esko);
+    }
 }
-
-
