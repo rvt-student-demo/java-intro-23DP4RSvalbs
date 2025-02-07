@@ -11,6 +11,23 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
         changeHistory.add(getBalance()); 
     }
 
+
+
+    @Override
+    public void addToWarehouse(double amount) {
+        super.addToWarehouse(amount);  
+        changeHistory.add(getBalance());  
+    }
+
+   
+    @Override
+    public double takeFromWarehouse(double amount) {
+        double takenAmount = super.takeFromWarehouse(amount);  
+        changeHistory.add(getBalance());  
+        return takenAmount;  
+    }
+
+
     public String history() {
         return changeHistory.toString();  
     }
