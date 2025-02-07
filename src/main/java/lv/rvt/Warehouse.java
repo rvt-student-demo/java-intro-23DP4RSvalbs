@@ -37,10 +37,15 @@ public class Warehouse {
         return 0;
     }
 
+    public double getRemainingSpace() {
+        return capacity - balance;
+    }
+
     @Override
     public String toString() {
-        return "balance = " + balance + ", space left " + (capacity - balance);
+        return "balance = " + balance + ", space left " + getRemainingSpace();
     }
 }
+
 
 
