@@ -52,10 +52,12 @@ public class ProductWarehouse extends Warehouse {
         juice.addToWarehouse(1.0);
         System.out.println(juice); 
         System.out.println("Updated Change History: " + juice.getChangeHistory()); 
+
+        System.out.println("Max Value: " + juice.getChangeHistory().maxValue());  
+        System.out.println("Min Value: " + juice.getChangeHistory().minValue()); 
+        System.out.println("Average: " + juice.getChangeHistory().average());  
     }
 }
-
-
 
 
    
