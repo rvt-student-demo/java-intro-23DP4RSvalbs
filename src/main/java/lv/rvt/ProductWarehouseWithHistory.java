@@ -32,6 +32,17 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
         return changeHistory.toString();  
     }
 
+
+    public void printAnalysis() {
+        System.out.println("Product: " + getName());  
+        System.out.println("History: " + history());  
+        System.out.println("Largest amount of product: " + changeHistory.maxValue());
+        System.out.println("Smallest amount of product: " + changeHistory.minValue());
+        System.out.println("Average: " + changeHistory.average());
+    }
+
+
+
     public static void main(String[] args) {
         ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
         juice.takeFromWarehouse(11.3);
@@ -39,6 +50,9 @@ public class ProductWarehouseWithHistory extends ProductWarehouse {
         
         juice.addToWarehouse(1.0);
         System.out.println(juice);  
-        System.out.println(juice.history());  
+        System.out.println(juice.history());
+        juice.printAnalysis();
     }
 }
+
+
