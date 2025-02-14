@@ -2,33 +2,25 @@ package lv.rvt;
 
 
 
-public class Book {
-    private String title;
-    private int pages;
-    private int year;
+public class Book implements Packable {
+    private String author;
+    private String name;
+    private double weight;
 
-    public Book(String name, int pages, int year){
-
-        this.pages = pages;
-        this.year = year;
-    }
-
-    public String getname(){
-        return this.title;
-        
-    }
-    public int getpages(){
-        return this.pages;
-        
-    }
-    public int getyear(){
-        return this.year;
-        
+    public Book(String author, String name, double weight) {
+        this.author = author;
+        this.name = name;
+        this.weight = weight;
     }
 
     @Override
-    public String toString(){
-        return this.title +", "+ this.pages +"pages, "+ this.year;
+    public double weight() {
+        return this.weight; 
     }
 
+    @Override
+    public String toString() {
+        return this.author + ": " + this.name;
+    }
 }
+
