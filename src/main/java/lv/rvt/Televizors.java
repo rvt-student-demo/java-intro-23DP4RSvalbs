@@ -12,18 +12,11 @@ public class Televizors {
     }
 
     
-    public void displayInfo(){
-
-
-        System.out.println("Kanals  "+name+"-"+ TV_channel_number + "cena:" + price);
+    public void showInfo(){
+        System.out.println("Kanāls "+TV_channel_number+" - "+name+", cena: " + price);
     }
 
-    public double getPrice(){
-
-        
-        return price;
-
-    }
+    
 
     
 }
